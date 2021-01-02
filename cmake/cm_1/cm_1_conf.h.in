@@ -1,0 +1,5 @@
+
+#define cm_1_VERSION_MAJOR @cm_1_VERSION_MAJOR@
+#define cm_1_VERSION_MINOR @cm_1_VERSION_MINOR@
+#define emoji_man @emoji_man@
+

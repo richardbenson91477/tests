@@ -1,0 +1,2 @@
+#!/bin/sh
+maxima --batch-string="batchload (\"$0.mac\");"

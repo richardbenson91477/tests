@@ -1,0 +1,11 @@
+#!/bin/sh
+
+#create table users (uuid VARCHAR(32) NOT NULL, name VARCHAR(80) NOT NULL, PRIMARY KEY (uuid));
+sqlite3 jeo.db << END
+  create table users (
+     uuid VARCHAR(32) NOT NULL,
+     name VARCHAR(80) NOT NULL,
+     PRIMARY KEY (uuid)
+  );
+END
+

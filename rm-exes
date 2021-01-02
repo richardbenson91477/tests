@@ -1,0 +1,9 @@
+#!/bin/bash
+for file in *; do
+    MIME=$(file --mime "$file" | awk '{print $2}' )
+    if [ z"$MIME" == z"application/x-executable;" -o z"$MIME" == z"application/x-pie-executable;" -o z"$MIME" == z"application/x-mach-binary;" -o z"$MIME" == z"application/x-object;" -o z"$MIME" == z"application/x-sharedlib;" ]; then
+        echo "$file"
+        rm -f "$file"
+        fi
+    done
+

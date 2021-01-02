@@ -1,0 +1,11 @@
+#!/bin/sh
+mysql -u rich -p << END
+  use jeo;
+  create table users (
+     uuid VARCHAR(32) NOT NULL,
+     name VARCHAR(80) NOT NULL,
+     PRIMARY KEY (uuid)
+  );
+  QUIT
+END
+

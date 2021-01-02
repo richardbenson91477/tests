@@ -1,0 +1,7 @@
+#!/bin/sh
+mysql -u root -p << END
+  CREATE DATABASE jeo;
+  GRANT ALL ON jeo.* TO rich@localhost;
+  QUIT
+END
+

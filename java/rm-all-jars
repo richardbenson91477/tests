@@ -1,0 +1,6 @@
+#!/bin/bash
+for file in $(find . -name '*.jar'); do
+    echo "$file"
+    rm -f "$file"
+    done
+

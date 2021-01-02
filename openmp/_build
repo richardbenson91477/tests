@@ -1,0 +1,6 @@
+#!/bin/sh
+EXT=c 
+for file in *."$EXT"; do
+    make $(basename "$file" ."$EXT")
+done
+

@@ -1,0 +1,19 @@
+# Ix = x
+# Kxy = x
+# Sxyz = xz(yz)
+
+# Rab == ba
+# R = S(K(SI))K
+
+S (K (S I)) K a b =
+  x         y z
+(K (SI)) a (K a) b =
+K (S I) a (K a) b =
+  x     y
+(S I) (K a) b =
+S I (K a) b =
+  x  y    z
+I b ((K a) b) =
+I b (K a b) =
+b
+

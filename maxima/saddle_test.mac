@@ -1,0 +1,40 @@
+
+saddle_test(fn) := (
+    print("fn=", fn),
+
+    dfx : diff(fn, x),
+    dfy : diff(fn, y),
+    print("dfx=", dfx),
+    print("dfy=", dfy),
+
+    ddfx : diff(dfx, x),
+    ddfy : diff(dfy, y),
+    dfxy : diff(dfx, y),
+    print("ddfx=", ddfx),
+    print("ddfy=", ddfy),
+    print("dfxy=", dfxy),
+
+    sdf : solve([dfx, dfy], [x, y]),
+    print("sdf=", sdf),
+
+    for s in sdf do (
+        sddfx : at(ddfx, s),
+        sddfy : at(ddfy, s),
+        sdfxy : at(dfxy, s),
+        H : sddfx * sddfy - sdfxy * sdfxy,
+        print("H{", s[1], ", ", s[2], "} = ", H)
+        )
+    );
+
+fns : [
+    x^4 - 4*x^2 + y^2,
+    x^2 + y^2 + 4*x*y,
+    3*x^2*y - y^3 - 3*x^2 - 3*y^2,
+    x^3 - y^3 - 2*x*y + 6,
+    x^3+4*x^2-x-4*y^2-3*y-3*x*y^2
+    ];
+
+for fn in fns do saddle_test(fn);
+/* vi:syntax=maxima
+*/
+

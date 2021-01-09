@@ -3,8 +3,8 @@ import "fmt"
 
 func main () {
     var str string
-    str += "fizz"
-    str += "buzz"
-    fmt.Printf("%s %d\n", str, s(4))
+    str += "Hello "
+    str += "world! "
+    fmt.Printf("%v %v\n", str, add3(4))
 }
 

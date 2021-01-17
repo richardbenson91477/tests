@@ -17,6 +17,8 @@ func main () {
     add4 := make_adder(4)
     fmt.Printf("%v\n", add4(3))
 
+    fmt.Printf("%v\n", make_adder(5)(2))
+
     func () {
         fmt.Printf("adios\n");
     } ()

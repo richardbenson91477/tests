@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3.8
 from numba import njit, prange
 
 @njit(nogil=True, cache=True, parallel=True)

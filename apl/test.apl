@@ -8,4 +8,3 @@ x ← 2 3 ρ 2 3 4 5 6 7
 
 )off
 
-# for \latex-name<tab> etc in vim: set filetype=julia after installing vim-julia

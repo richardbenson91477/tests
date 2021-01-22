@@ -1,0 +1,3 @@
+for \latex-name<tab> etc in vim: set filetype=julia after installing vim-julia
+
+e.g. \leftarrow<tab>

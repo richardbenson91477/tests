@@ -4,12 +4,10 @@ import (
 	"fmt"
 )
 
-// for reference
-const pi_valid = 3.141592653589793238
-
-// a way to estimate π c/o https://www.youtube.com/watch?v=FQ1k_YpyG_A
+// a way to estimate π
 func main() {
-	const num_steps = 1000000000
+    const pi_valid = 3.141592653589793238
+	const num_steps = 1_000_000_000
 	const step = 1.0 / float64(num_steps)
 
 	total := 0.0
@@ -22,3 +20,4 @@ func main() {
 
 	fmt.Printf("%.16f %.16f\n", pi, pi_valid)
 }
+

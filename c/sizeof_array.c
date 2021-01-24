@@ -7,8 +7,7 @@ int main () {
     unsigned long sb = sizeof (b),\
         sb2 = sizeof ((char *)b),\
         sb3 = sizeof (b[0]),\
-        sb4 = sizeof (b[0]),\
-        sb5 = sizeof (*b);
+        sb4 = sizeof (*b);
 
     printf ("sizeof (b) = %ld\n", sb);
     printf ("sizeof ((char *)b) = %ld\n", sb2);

@@ -1,7 +1,7 @@
 #!/usr/bin/env jsc
 
 var pi_valid = 3.141592653589793238
-var num_steps = 1e+08
+var num_steps = 1e+09
 var step = 1.0 / num_steps
 
 var total = 0.0

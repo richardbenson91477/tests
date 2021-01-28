@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+ <semantics>
+  <mfrac>
+   <mrow>
+    <mn>3</mn>
+    <mo stretchy="false">−</mo>
+    <mi>x</mi>
+   </mrow>
+   <msup>
+    <mi>y</mi>
+    <mn>2</mn>
+   </msup>
+  </mfrac>
+  <annotation encoding="StarMath 5.0">{3 - x} over {y^2} </annotation>
+ </semantics>
+</math>

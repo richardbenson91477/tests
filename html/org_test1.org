@@ -1,0 +1,105 @@
+#+TITLE: "Hello, world!"
+
+* This Is A Heading
+
+** This Is A Sub-Heading
+   SCHEDULED: <2020-10-31 Sat>
+
+*** And A Sub-Sub-Heading
+    DEADLINE: <2020-11-01 Sun>
+    other text
+
+Paragraphs are separated by at least one empty line.
+
+asfd
+  
+*bold* /italic/ _underlined_ +strikethrough+ =monospaced=
+
+[[http://Karl-Voit.at][Link description]]
+
+http://Karl-Voit.at → link without description
+
+ - list item
+ - another item
+   - sub-item
+     1. also enumerated
+     2. if you like
+ - [ ] yet to be done
+ - [X] item which is done
+
+: Simple pre-formatted text such as for source code.
+: This also respects the line breaks. *bold* is not bold here.	  
+
+| My Column 1|My Column 2 | Last Column |
+|-
+| 42 | foo | bar|
+| 23 | baz | abcdefg|
+|-
+| 65 |||	  
+
+* Top level headline
+
+** Second level
+   some text
+
+*** Third level
+    more text
+
+* Another top level headline
+
+  | this is the first cell |
+  | asdf                   |
+
+| id |  n2 | n3 |  n4 | n5 | mean |
+|----+-----+----+-----+----+------|
+|  1 | 2.4 |    | 3.3 |    | 2.85 |
+|  2 | 4.1 |    | 5.0 |    | 4.55 |
+#+TBLFM: $6=vmean($2..$5)
+
+some, comma, separated, values
+for control-c+|
+
+* LaTeX integration
+  - Characters: \alpha \rightarrow \beta
+
+#+name: maths-py1
+#+BEGIN_SRC python
+x = 4 + 4 + 4
+return "4 + 4 + 4 is " + str(x)
+#+END_SRC
+
+#+RESULTS: maths-py1
+: 4 + 4 + 4 is 12
+
+#+name: test-maxima
+#+header: :exports results
+#+header: :var x=1.3121254
+#+begin_src maxima 
+  programmode: false;
+  print(12^x);
+#+end_src
+
+#+RESULTS: test-maxima
+: 26.06280316745402
+
+#+name: solve-maxima
+#+begin_src maxima :results output
+  programmode: false;
+  eq: x**2-16 = 0;
+  solution: solve(eq, x);
+  print(solution);
+#+end_src
+
+#+RESULTS: solve-maxima
+: solve: solution:
+:                                     x = - 4
+:                                      x = 4
+: [%t1, %t2] 
+
+#+NAME: maxima3
+#+BEGIN_SRC maxima :results raw
+  tex(exp(-x)/x);
+#+END_SRC
+
+#+RESULTS: maxima3
+$${{e^ {- x }}\over{x}}$$

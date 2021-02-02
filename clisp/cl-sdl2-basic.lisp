@@ -1,9 +1,7 @@
 #!/bin/sbcl --script
 ; c/o cl-sdl2 examples/ folder
 
-(let ((quicklisp-init #P"~/.quicklisp/setup.lisp"))
-  (when (probe-file quicklisp-init)
-    (load quicklisp-init)))
+(load #P"~/.quicklisp/setup.lisp")
 
 (require :sdl2)
 (require :cl-opengl)

@@ -1,0 +1,7 @@
+#!/usr/bin/env -S bc -q
+scale = 3 
+
+for (c = 0.0; c <= 1.0; c += 0.1)
+    print c, "\n"
+
+quit

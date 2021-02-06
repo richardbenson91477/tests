@@ -1,7 +1,7 @@
 #!/usr/bin/env dc
 
 # passes float counting sanity test
-# is use "float" colloquially as these are obviously not IEEE standard number whatever
+# I use "float" colloquially as these are obviously not IEEE standard number whatever
 0.1
 0.1
 +

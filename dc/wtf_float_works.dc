@@ -1,4 +1,8 @@
 #!/usr/bin/env dc
+
+# passes float counting sanity test
+# is use "float" colloquially as this obviously is not IEEE standard number whatever
+# but rather some saner representation of real numbers
 0.1
 0.1
 +

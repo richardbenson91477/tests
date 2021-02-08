@@ -1,6 +1,6 @@
 n = 0.0
-for x = 0 to 10
-print n
-n = n + 0.1
-next x
+while n <= 1.0
+    print n
+    n = n + 0.1
+wend
 

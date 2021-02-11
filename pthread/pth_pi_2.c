@@ -8,6 +8,7 @@ void *pi_thread (void *v);
 const int THREADS_N = 4;
 const uint64_t num_steps = 1e+9;
 const double step = 1.0 / (double)num_steps;
+const double step_sq = step * step;
 
 typedef struct {
     int t_n;
@@ -57,8 +58,8 @@ void *pi_thread (void *v) {
 
     double x;
     for (uint64_t i = t_data->t_n; i < num_steps; i += THREADS_N) {
-        x = (i + 0.5) * step;
-        t_data->t_total += 4.0 / (1.0 + x * x);
+        x = i + 0.5;
+        t_data->t_total += 4.0 / (1.0 + step_sq * x * x);
     }
 
     pthread_exit(NULL);

@@ -1,8 +1,8 @@
-rem clear screen
+clear screen
 print "hello, world!"
 
 x$ = "c"
 y$ = "a"
 print x$ + y$ + "t"
 
-rem inkey$
+inkey$

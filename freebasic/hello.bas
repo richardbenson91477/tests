@@ -1,6 +1,5 @@
 
-print "Enter name:"
 dim as string username
-input username
+input "Enter name: ", username
 print "Hello, " + username
 

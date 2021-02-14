@@ -1,0 +1,5 @@
+
+print "What's your name?" ;
+input " " n$
+print "Hello, " + n$
+

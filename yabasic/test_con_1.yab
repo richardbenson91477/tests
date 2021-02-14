@@ -1,5 +1,8 @@
-clear screen
-print "hello, world"
+rem clear screen
+print "hello, world!"
 
-inkey$
+x$ = "c"
+y$ = "a"
+print x$ + y$ + "t"
 
+rem inkey$

@@ -1,8 +1,6 @@
-#!/usr/bin/env yabasic
 open window 100,100
 circle 50,50,40
 text 10,50,"Press any key to get a printout"
-clear screen
-rem inkey$
+sleep 4
 rem close window
 

@@ -1,0 +1,15 @@
+
+num_stps = 10000000
+stp = 1.0 / num_stps
+stpsq = stp * stp
+
+total = 0.0
+for i = 0 to num_stps
+    total = total + 4.0 / (1.0 + (i * i) * stpsq)
+next i
+
+my_pi = stp * total
+print my_pi, pi
+
+print "pi - my_pi: ", pi - my_pi
+

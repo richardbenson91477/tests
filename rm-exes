@@ -2,12 +2,15 @@
 for file in *; do
     MIME=$(file --mime "$file" | awk '{print $2}')
     case "$MIME" in
-        "application/x-executable;"|"application/x-pie-executable;"|"application/x-mach-binary;"|"application/x-object;"|"application/x-sharedlib;")
-            echo "$file"
-            rm -f "$file"
+        "application/x-executable;"|"application/x-pie-executable;")
+            ;;
+        "application/x-mach-binary;"|"application/x-object;"|"application/x-sharedlib;")
             ;;
         *)
+            continue
             ;;
         esac
+    echo "$file"
+    rm -f "$file"
     done
 

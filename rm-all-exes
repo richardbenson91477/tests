@@ -1,9 +1,13 @@
 #!/bin/bash
 for file in $(find .); do
     MIME=$(file --mime "$file" | awk '{print $2}')
-    if [ z"$MIME" == z"application/x-executable;" -o z"$MIME" == z"appication/x-pie-executable;" -o z"$MIME" == z"application/x-mach-binary;" -o z"$MIME" == z"application/x-object;" -o z"$MIME" == z"application/x-sharedlib;" ]; then
-        echo "$file"
-        rm -f "$file"
-        fi
+    case "$MIME" in
+        "application/x-executable;"|"application/x-pie-executable;"|"application/x-mach-binary;"|"application/x-object;"|"application/x-sharedlib;")
+            echo "$file"
+            rm -f "$file"
+            ;;
+        *)
+            ;;
+        esac
     done
 

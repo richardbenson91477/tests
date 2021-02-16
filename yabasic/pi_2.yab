@@ -1,5 +1,5 @@
 
-num_stps = 1e+7
+num_stps = 1e+8
 stp = 1.0 / num_stps
 stpsq = stp * stp
 
